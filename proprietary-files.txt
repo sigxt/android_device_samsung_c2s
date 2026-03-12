@@ -27,9 +27,9 @@ vendor/lib64/libexynoscamera3.so
 vendor/lib64/libexynoscamera_bayergdc_plugin.so
 vendor/lib64/libexynoscamera_fakemultiframe.so
 vendor/lib64/libexynoscamera_vpl_plugin.so
-vendor/lib64/libTOFProc_interface.so
-vendor/lib64/libdatazip.so
-vendor/lib64/libiu456_datapath_processor.so
+#vendor/lib64/libTOFProc_interface.so
+#vendor/lib64/libdatazip.so
+#vendor/lib64/libiu456_datapath_processor.so
 
 # Camera (Firmware)
 vendor/firmware/dual_cal_wide_swide.bin
@@ -58,10 +58,10 @@ vendor/firmware/is_mcu_fw.bin
 vendor/firmware/is_rta.bin
 vendor/firmware/rxse.bin
 vendor/firmware/setfile_2l3.bin
-vendor/firmware/setfile_gh1.bin
+#vendor/firmware/setfile_gh1.bin
 vendor/firmware/setfile_hm1.bin
-vendor/firmware/setfile_imx586.bin
-vendor/firmware/a96t365_c2s_eur.bin
+#vendor/firmware/setfile_imx586.bin
+#vendor/firmware/a96t365_c2s_eur.bin
 vendor/firmware/txse1.bin
 vendor/firmware/vts.bin
 
@@ -70,9 +70,12 @@ vendor/bin/hw/gpsd
 vendor/lib64/libwrappergps.so
 
 # NFC
-vendor/etc/nfc/sec_s3nsen4_hwreg.bin
-vendor/etc/nfc/sec_s3nsen4_swreg.bin
-vendor/firmware/nfc/sec_s3nsen4_firmware.bin
+vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
+vendor/lib64/nfc_nci_nxpsn.so
+vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
+vendor/etc/libnfc-nxp.conf
+vendor/etc/nfc/libnfc-nxp_RF.conf
+vendor/firmware/nfc/libsn100u_fw.so
 
 # RIL
 vendor/etc/floating_feature.xml
@@ -106,15 +109,15 @@ vendor/tee/driver/00000000-0000-0000-0000-53626f786476
 
 # Wi-Fi
 vendor/etc/wifi/indoorchannel.info
-vendor/firmware/nvram.txt_1rh_es11_b0
-vendor/firmware/nvram.txt_1rh_es12_b0
-vendor/firmware/nvram.txt_1rh_es13_b0
-vendor/firmware/nvram.txt_1rh_es32_b0
-vendor/firmware/nvram.txt_1rh_es41_b1
-vendor/firmware/nvram.txt_1rh_es42_b1
+#vendor/firmware/nvram.txt_1rh_es11_b0
+#vendor/firmware/nvram.txt_1rh_es12_b0
+#vendor/firmware/nvram.txt_1rh_es13_b0
+#vendor/firmware/nvram.txt_1rh_es32_b0
+#vendor/firmware/nvram.txt_1rh_es41_b1
+#vendor/firmware/nvram.txt_1rh_es42_b1
 vendor/firmware/nvram.txt_1rh_es43_b1
 vendor/firmware/nvram.txt_CS01_semco_b1
-vendor/firmware/nvram.txt_ES00_semco_b0
-vendor/firmware/nvram.txt_ES01_semco_b0
-vendor/firmware/nvram.txt_ES02_semco_b0
-vendor/firmware/nvram.txt_ES03_semco_b0
+#vendor/firmware/nvram.txt_ES00_semco_b0
+#vendor/firmware/nvram.txt_ES01_semco_b0
+#vendor/firmware/nvram.txt_ES02_semco_b0
+#vendor/firmware/nvram.txt_ES03_semco_b0
