@@ -51,3 +51,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 #OTA updater
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     lineage.updater.uri=https://sigxt.github.io/lineage-c2s/ota/c2s.json
+
+#Maintainer
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lineage.maintainer=sigxt
