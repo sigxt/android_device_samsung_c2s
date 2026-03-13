@@ -76,6 +76,11 @@ $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 PRODUCT_PACKAGES += \
     nxp.android.hardware.nfc@1.2-service
 
+# Time / Time Zone Detection
+PRODUCT_PACKAGES += \
+    TimeDetector \
+    TimeZoneDetector
+
 # Inherit from Hubble
 $(call inherit-product, device/samsung/universal9830-common/device-hubble.mk)
 
