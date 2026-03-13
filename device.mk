@@ -77,3 +77,7 @@ $(call inherit-product, device/samsung/universal9830-common/device-hubble.mk)
 
 # Inherit from the proprietary version
 $(call inherit-product-if-exists, vendor/samsung/c2s/c2s-vendor.mk)
+
+# Maintainer
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.lineage.maintainer=sigxt
