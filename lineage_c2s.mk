@@ -47,3 +47,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # Define PDA property for camera
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.build.PDA=N986BXXSIHYH3
+
+#OTA updater
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    lineage.updater.uri=https://sigxt.github.io/lineage-c2s/ota/c2s.json
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.lineage.build.version=$(BUILD_DATETIME)
