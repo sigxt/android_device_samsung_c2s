@@ -78,10 +78,17 @@ $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 PRODUCT_PACKAGES += \
     nxp.android.hardware.nfc@1.2-service
 
-# Time / Time Zone Detection
-PRODUCT_PACKAGES += \
-    TimeDetector \
-    TimeZoneDetector
+# ===============================
+# Optional Time apps
+# ===============================
+# Include only if folders exist, avoids build failure when not synced
+ifneq ($(wildcard $(LOCAL_PATH)/../../packages/apps/TimeDetector),)
+    PRODUCT_PACKAGES += TimeDetector
+endif
+
+ifneq ($(wildcard $(LOCAL_PATH)/../../packages/apps/TimeZone),)
+    PRODUCT_PACKAGES += TimeZone
+endif
 
 # Inherit from Hubble
 $(call inherit-product, device/samsung/universal9830-common/device-hubble.mk)
