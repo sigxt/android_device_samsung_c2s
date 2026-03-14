@@ -29,8 +29,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl:64 \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor:64
-PRODUCT_PROPERTY_OVERRIDES += \
-    bluetooth.device.default_name=Galaxy Note20 Ultra
 
 # Boot Animation
 TARGET_SCREEN_HEIGHT := 3200
