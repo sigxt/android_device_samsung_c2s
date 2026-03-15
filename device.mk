@@ -80,8 +80,8 @@ PRODUCT_PACKAGES += \
     nxp.android.hardware.nfc@1.2-service
 
 # NFC AIDL service
-PRODUCT_COPY_FILES += \
-    vendor/samsung/c2s/proprietary/vendor/bin/nxp.android.hardware.nfc@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/nxp.android.hardware.nfc@1.2-service
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.nfc_nci=pn547
 
 # Camera firmware
 PRODUCT_COPY_FILES += \
