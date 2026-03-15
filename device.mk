@@ -97,10 +97,6 @@ $(call inherit-product-if-exists, vendor/samsung/c2s/c2s-vendor.mk)
 PRODUCT_SYSTEM_PROPERTIES += \
     debug.hwui.disable_overlays=1
 
-# Enable Network Time Updater
-PRODUCT_PACKAGES += \
-    NetworkTimeUpdateService
-
 # Make sure the system property allows auto time & timezone
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.config.ntp_server=pool.ntp.org \
