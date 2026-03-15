@@ -56,4 +56,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.lineage.maintainer=sigxt
 
-BUILD_DISPLAY_ID := $(BUILD_ID) sigxt $(BUILD_KEYS)
+# Append your tag to the display ID
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.display.id="$(BUILD_ID) sigxt $(BUILD_KEYS)"BUILD_DISPLAY_ID := $(BUILD_ID) sigxt $(BUILD_KEYS)
