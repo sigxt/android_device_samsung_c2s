@@ -12,4 +12,11 @@
             <density>560</density>
         </density>
     </densityMapping>
+
+    <Display id="0">
+        <Resolution width="1440" height="3088"/>
+        <RefreshRate min="60" max="120"/>
+        <Density xdpi="494.27" ydpi="496.42"/>
+        <HDR type="INVALID"/>
+    </Display>
 </displayConfiguration>
