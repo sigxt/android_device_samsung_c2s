@@ -70,6 +70,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.c2s.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.c2s.nfc.rc
+
 $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 
 # NFC
