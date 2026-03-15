@@ -41,7 +41,7 @@ $(call soong_config_set,samsungCameraVars,extra_ids,"0 52") # IDs: 0 is fornt, 5
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/display_id_4633128672291735937.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4633128672291735937.xml
 
-# Overlays 
+# Overlays
 PRODUCT_PACKAGES += \
     FrameworkResOverlayDevice \
     SettingsProviderOverlayDevice \
@@ -78,11 +78,6 @@ $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 # NFC
 PRODUCT_PACKAGES += \
     nxp.android.hardware.nfc@1.2-service
-
-# NFC HALs
-PRODUCT_COPY_FILES += \
-    vendor/samsung/c2s/proprietary/lib64/nfc_nci_nxpsn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci_nxpsn.so \
-    vendor/samsung/c2s/proprietary/lib64/vendor.samsung.hardware.nfc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.nfc@2.0.so
 
 # Inherit from Hubble
 $(call inherit-product, device/samsung/universal9830-common/device-hubble.mk)
