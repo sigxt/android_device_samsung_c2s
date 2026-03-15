@@ -35,7 +35,7 @@ TARGET_SCREEN_HEIGHT := 3200
 TARGET_SCREEN_WIDTH := 1440
 
 # Camera
-$(call soong_config_set,samsungCameraVars,extra_ids,52) # ID=52 is telephoto
+$(call soong_config_set,samsungCameraVars,extra_ids,"0 52") # IDs: 0 is fornt, 52 is telephoto
 
 # Density mapping config
 PRODUCT_COPY_FILES += \
@@ -79,6 +79,11 @@ $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 PRODUCT_PACKAGES += \
     nxp.android.hardware.nfc@1.2-service
 
+# NFC HALs
+PRODUCT_COPY_FILES += \
+    vendor/samsung/c2s/proprietary/lib64/nfc_nci_nxpsn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci_nxpsn.so \
+    vendor/samsung/c2s/proprietary/lib64/vendor.samsung.hardware.nfc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.nfc@2.0.so
+
 # ===============================
 # Optional Time apps
 # ===============================
@@ -97,6 +102,6 @@ $(call inherit-product, device/samsung/universal9830-common/device-hubble.mk)
 # Inherit from the proprietary version
 $(call inherit-product-if-exists, vendor/samsung/c2s/c2s-vendor.mk)
 
-# Maintainer
+# HWUI disable
 PRODUCT_SYSTEM_PROPERTIES += \
     debug.hwui.disable_overlays=1
