@@ -22,6 +22,7 @@ vendor/firmware/bcmdhd_mon.bin_b1
 vendor/firmware/bcmdhd_sta.bin_b1
 
 # Camera
+vendor/apex/com.samsung.android.camera.unihal.signed.apex
 vendor/lib64/hw/camera.exynos990.so
 vendor/lib64/libexynoscamera3.so
 vendor/lib64/libexynoscamera_bayergdc_plugin.so
@@ -30,6 +31,12 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 #vendor/lib64/libTOFProc_interface.so
 #vendor/lib64/libdatazip.so
 #vendor/lib64/libiu456_datapath_processor.so
+
+# Camera (cameradata configs)
+system/cameradata/camera-feature.xml
+system/cameradata/singletake/service-feature.xml
+system/cameradata/aremoji-feature.xml
+system/cameradata/preloadfilters/internal_filter.xml
 
 # Camera (Firmware)
 vendor/firmware/dual_cal_wide_swide.bin
@@ -74,8 +81,21 @@ vendor/lib64/libwrappergps.so
 vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
 vendor/lib64/nfc_nci_nxpsn.so
 vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
+
 vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc/libnfc-nxp_RF.conf
+
+vendor/etc/init/init.nfc.samsung.rc
+vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc
+
+vendor/etc/permissions/android.hardware.nfc.xml
+vendor/etc/permissions/android.hardware.nfc.uicc.xml
+vendor/etc/permissions/android.hardware.nfc.hcef.xml
+vendor/etc/permissions/android.hardware.nfc.hce.xml
+vendor/etc/permissions/android.hardware.nfc.ese.xml
+
+vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
+
 vendor/firmware/nfc/libsn100u_fw.so
 
 # RIL
