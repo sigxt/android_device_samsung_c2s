@@ -99,4 +99,5 @@ $(call inherit-product-if-exists, vendor/samsung/c2s/c2s-vendor.mk)
 
 # Maintainer
 PRODUCT_SYSTEM_PROPERTIES += \
+    debug.hwui.disable_overlays=1 \
     ro.lineage.maintainer=sigxt
