@@ -1,3 +1,14 @@
+on init
+    # Make sure the NFC HAL binary is executable
+    chmod 755 /vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
+
+on boot
+    # Make sure device nodes have correct permissions
+    chmod 0660 /dev/pn547
+    chown nfc nfc /dev/pn547
+    chmod 0660 /dev/st21nfc
+    chown nfc nfc /dev/st21nfc
+
 service vendor.nfc /vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
     class hal
     user nfc

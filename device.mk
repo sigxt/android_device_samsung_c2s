@@ -79,6 +79,10 @@ $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 PRODUCT_PACKAGES += \
     nxp.android.hardware.nfc@1.2-service
 
+# NFC AIDL service
+PRODUCT_COPY_FILES += \
+    vendor/samsung/c2s/proprietary/vendor/bin/nxp.android.hardware.nfc@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/nxp.android.hardware.nfc@1.2-service
+
 # Camera firmware
 PRODUCT_COPY_FILES += \
     vendor/samsung/c2s/proprietary/vendor/firmware/setfile_3j1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/setfile_3j1.bin
