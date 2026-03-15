@@ -34,6 +34,7 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 # Camera (Firmware)
 vendor/firmware/dual_cal_wide_swide.bin
 vendor/firmware/dual_cal_wide_tele.bin
+vendor/firmware/setfile_3j1.bin
 
 # Hotword Enrollment
 product/priv-app/HotwordEnrollmentOKGoogleEx3CORTEXM4/HotwordEnrollmentOKGoogleEx3CORTEXM4.apk
