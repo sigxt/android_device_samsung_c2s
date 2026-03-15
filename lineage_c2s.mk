@@ -55,5 +55,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #Maintainer
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.lineage.maintainer=sigxt
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.build.display.id=$(BUILD_ID) sigxt $(BUILD_KEYS)
+
+BUILD_DISPLAY_ID := $(BUILD_ID) sigxt $(BUILD_KEYS)
