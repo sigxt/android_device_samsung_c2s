@@ -84,10 +84,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/c2s/proprietary/lib64/nfc_nci_nxpsn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci_nxpsn.so \
     vendor/samsung/c2s/proprietary/lib64/vendor.samsung.hardware.nfc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.nfc@2.0.so
 
-# Automatic network time & timezone
-PRODUCT_PACKAGES += \
-    NetworkTimeUpdateService
-
 # Inherit from Hubble
 $(call inherit-product, device/samsung/universal9830-common/device-hubble.mk)
 
