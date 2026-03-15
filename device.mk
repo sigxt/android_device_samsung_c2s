@@ -35,7 +35,7 @@ TARGET_SCREEN_HEIGHT := 3200
 TARGET_SCREEN_WIDTH := 1440
 
 # Camera
-$(call soong_config_set,samsungCameraVars,extra_ids,0 52) # IDs: 0 is fr0nt, 52 is telephoto
+$(call soong_config_set,samsungCameraVars,extra_ids,0,52) # IDs: 0 is fr0nt, 52 is telephoto
 
 # Density mapping config
 PRODUCT_COPY_FILES += \
