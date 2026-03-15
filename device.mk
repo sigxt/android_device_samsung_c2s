@@ -84,17 +84,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/c2s/proprietary/lib64/nfc_nci_nxpsn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci_nxpsn.so \
     vendor/samsung/c2s/proprietary/lib64/vendor.samsung.hardware.nfc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.nfc@2.0.so
 
-# ===============================
-# Optional Time apps
-# ===============================
-# Include only if folders exist, avoids build failure when not synced
-ifneq ($(wildcard $(LOCAL_PATH)/../../packages/apps/TimeDetector),)
-    PRODUCT_PACKAGES += TimeDetector
-endif
-
-ifneq ($(wildcard $(LOCAL_PATH)/../../packages/apps/TimeZone),)
-    PRODUCT_PACKAGES += TimeZone
-endif
+# Automatic network time & timezone
+PRODUCT_PACKAGES += \
+    NetworkTimeUpdateService
 
 # Inherit from Hubble
 $(call inherit-product, device/samsung/universal9830-common/device-hubble.mk)
